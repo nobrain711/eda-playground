@@ -1,42 +1,40 @@
 # ==================================================
 # Core numerical & data handling (EDA 필수)
-# 수치 연산, 테이블 데이터 처리의 기반
+# pandas 3.x requires numpy 2.x
 # ==================================================
-numpy>=1.26
-pandas>=2.1
+numpy>=2.0
+pandas>=3.0
 
 # ==================================================
 # Visualization
-# 정적 그래프, 분포/관계 시각화
 # ==================================================
 matplotlib>=3.8
 seaborn>=0.13
 
 # ==================================================
 # Statistics & scientific computing
-# 통계 계산, 분포 분석, 보조 EDA
 # ==================================================
-scipy>=1.11
+scipy>=1.12
 
 # ==================================================
 # Geospatial analysis & world map visualization
-# 국제 데이터 / 국가·지역 단위 지도 시각화
+# geopandas 0.15+ recommended for pandas 3.x
 # ==================================================
-geopandas>=0.14
+geopandas>=0.15
+country_converter>=0.8.0
 shapely>=2.0
 pyproj>=3.6
 fiona>=1.9
 
 # ==================================================
 # Machine Learning
-# 스케일링, 데이터 분할, 베이스라인 모델
+# sklearn 1.5+ recommended for numpy 2.x
 # ==================================================
-scikit-learn>=1.4
+scikit-learn>=1.5
 
 # ==================================================
 # Jupyter Notebook environment
-# EDA 실행, 시각화, 문서화 환경
 # ==================================================
-jupyterlab>=4.1
+jupyterlab>=4.2
 ipykernel>=6.29
 ipython>=8.20
