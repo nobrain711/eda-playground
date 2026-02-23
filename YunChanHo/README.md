@@ -15,6 +15,12 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 
 ---
 
+## Data Policy
+- Kaggle 원본 데이터는 Git에 커밋하지 않습니다.
+- 분석은 통합 데이터셋 `data/happiness_2015_2024.csv` 기준으로 진행합니다.
+
+---
+
 ## 팀원
 
 | GitHub | dhksrlghd | rusidian | nobrain711 | imseunghyeon264 | ParkMinSeon22 | ch3477-sudo |
@@ -26,8 +32,9 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 
 ## Final Outputs
 - 통합 데이터셋: `data/happiness_2015_2024.csv`
-- 최종 취합 리포트: (업데이트 예정)
-- 핵심 인사이트 요약: (업데이트 예정)
+- 최종 취합 리포트: `reports/eda_report.md` (업데이트 예정)
+- 핵심 인사이트 요약: `reports/key_insights.md` (업데이트 예정)
+- 시각화 이미지: `reports/figures/` (업데이트 예정)
 
 ---
 
@@ -51,6 +58,33 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 
 ---
 
+## How to Run (Recommended Order)
+
+- Step 1) 데이터 통합/정제
+  - `YunChanHo/01_merge_standardize.ipynb` 또는 `HongWanGi/01_World_Happiness.ipynb`
+  - 결과물: `data/happiness_2015_2024.csv`
+
+- Step 2) 전체 EDA 리포트
+  - `YunChanHo/02_eda_report.ipynb`
+  - `ParkMinSeon/eda_report.ipynb`
+
+- Step 3) 변동성 + 코로나 전후 비교 (선택)
+  - `JangHanJae/eda_volatility_covid_interpretation.ipynb`
+
+- Step 4) 추가 분석/정리 (선택)
+  - `LimSeungHyeon/eda_analysis.ipynb`
+  - `LimSeungHyeon/manual.md`
+
+---
+
+## Notebook → Report Mapping (Draft)
+- Data Overview / Data Quality: `01_merge_standardize.ipynb`, `01_World_Happiness.ipynb`
+- Descriptive Statistics / Univariate / Bivariate / Correlation: `02_eda_report.ipynb`, `eda_report.ipynb`
+- Volatility Analysis / COVID Before-After: `eda_volatility_covid_interpretation.ipynb`, `eda_volatility_covid_interpretation.md`
+- Appendix (추가 분석/참고): `eda_analysis.ipynb`, `manual.md`
+
+---
+
 ## EDA Report Structure
 최종 취합 리포트는 아래 구조를 기준으로 정리합니다.
 
@@ -66,6 +100,8 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 - COVID Before/After (2015–2019 vs 2020–2024)
 - Conclusions & Recommendations
 - Appendix (추가 분석/참고)
+
+---
 
 ## Used Tech
 - Language: Python
@@ -98,3 +134,33 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 - 코로나 전/후(2015–2019 vs 2020–2024) 비교를 통해 분포 변화와 변동성 변화 여부를 점검했습니다.
   - 결과: KDE/Boxplot 및 분산/꼬리 지표로 분포 차이를 비교하고, “순위 변동성 자체” 변화도 확인했습니다.
   - 권장: 전/후 비교 시 표본 국가 수 변화, 결측/스키마 차이를 함께 통제하고 동일 기준으로 재현합니다.
+
+---
+
+### 폴더 구조
+project/
+|
+├── data/
+├── HongWanGi
+├── JangHanJae
+├── JoDongHwi
+├── LimSeungHyeon
+├── ParkMinSeon
+├── YunChanHo
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+└── README.md
+
+---
+
+## Getting Started (FAQ)
+
+- Q. `data/happiness_2015_2024.csv`가 없어요.  
+  - A. `How to Run`의 Step 1(통합/정제) 노트북을 먼저 실행해 통합 CSV를 생성하세요.
+
+- Q. geopandas 설치 중 에러가 나요.  
+  - A. conda 환경에서 `conda install geopandas` 후 `pip install -r requirements.txt` 순서로 설치를 권장합니다.
+
+- Q. 어떤 노트북부터 실행해야 하나요?  
+  - A. README의 `How to Run (Recommended Order)` 순서를 따르세요.
