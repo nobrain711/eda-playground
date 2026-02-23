@@ -137,20 +137,22 @@ World Happiness Report (2015–2024) 데이터를 기반으로 팀원들이 수�
 
 ---
 
-### 폴더 구조
+###  폴더 구조
+```
 project/
 |
-├── data/
-├── HongWanGi
-├── JangHanJae
-├── JoDongHwi
-├── LimSeungHyeon
-├── ParkMinSeon
-├── YunChanHo
-├── requirements.txt
-├── LICENSE
-├── .gitignore
-└── README.md
+├─── data/              
+├─── HongWanGi          
+├─── JangHanJae         
+├─── JoDongHwi          
+├─── LimSeungHyeon      
+├─── ParkMinSeon        
+├─── YunChanHo          
+├─── requirements.txt   
+├─── LICENSE            
+├─── .gitignore
+└─── README.md
+```
 
 ---
 
